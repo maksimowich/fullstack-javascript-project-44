@@ -6,10 +6,10 @@ export default {
   getAnswerAndQuestion: () => {
     let question = '';
     let correctAnswer;
-    const firstElementOfProgression = getRandomInt(100) + 1;
-    const numberOfElementsInProgression = getRandomInt(5) + 5;
-    const progressionStep = getRandomInt(20) + 1;
-    const indexOfMissingElement = getRandomInt(numberOfElementsInProgression - 1);
+    const firstElementOfProgression = getRandomInt(1, 100);
+    const numberOfElementsInProgression = getRandomInt(5, 11);
+    const progressionStep = getRandomInt(1, 20);
+    const indexOfMissingElement = getRandomInt(0, numberOfElementsInProgression);
     for (let i = 0; i < numberOfElementsInProgression; i += 1) {
       if (i !== indexOfMissingElement) {
         question += `${firstElementOfProgression + progressionStep * i} `;
