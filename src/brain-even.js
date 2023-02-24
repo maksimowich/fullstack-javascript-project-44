@@ -1,6 +1,4 @@
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
+import getRandomInt from './helper-functions.js';
 
 export default {
   name: 'brain-even',
