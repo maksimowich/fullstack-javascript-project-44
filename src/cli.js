@@ -8,7 +8,7 @@ function playRound(game) {
     console.log('Correct!');
     return 'Won';
   }
-  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
+  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
   return 'Loss';
 }
 
@@ -19,6 +19,7 @@ export default (game, numberOfRounds = 3) => {
   console.log(game.generalTask);
   for (let i = 0; i < numberOfRounds; i += 1) {
     if (playRound(game) === 'Loss') {
+      console.log(`Let's try again, ${userName}!`);
       return;
     }
   }
